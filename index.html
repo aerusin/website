@@ -3,7 +3,7 @@
         <title>First Website Created</title>
         <link rel="stylesheet" href="./style.css">
         <style>
-            h1 {
+            h2 {
                 color: black;
                 text-align: center;
                 font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -25,29 +25,52 @@
                 height: 60px;
                 
             }
+            li {
+                color:rgb(182, 40, 182);
+                font-size: large;
+            }
+            div {
+                width: 50px;
+                height: 50px;
+                background-color: royalblue;
+                animation-name: rainbow;
+                animation-duration: 4s;
+                position: relative;
+
+            }
+
+            @keyframes rainbow {
+                0% {background-color: red; left: 0px; top: 0px;}
+                25% {background-color: orange; left: 100px; top: 100px;}
+                50% {background-color: green; left: 200x; top: 0px;}
+                100% {background-color: blue; left: 100px; top: -100px;}
+            }
         </style>
         <script>
             temp = 0;
+            //Tried to implement a function to change the color of the 
+            //button every time it was clicked.
             function changeColor(){
                 //if(temp = 0){
                   //  i = document.getElementById("buttonColor");
                    // i.background-color = black;
+                   //}
                     
                 }
 
-            }
+
         </script>
     </head>
 
     <body>
 
-        <h1>Cute picture of my cat Winston in a box</h1>
         <img src="winston.jpg" class=cat>
+        <h2>Cute picture of my cat Winston in a box</h2>
 
         
         
         
-        <h2>Grocery List From <a href=https://foodlion.com/">Food Lion</a></h1>
+        <h3>Grocery List From <a href=https://foodlion.com/">Food Lion</a></h1>
         <ul>
             <li>Pizza</li>
             <li>Soda</li>
@@ -56,7 +79,9 @@
         <label for="button">Click to change button to random color</label>
         <button type = "button" onclick="changeColor()" id = #buttonColor>Click</button>
     
-        </form>
+        
+        
+        <div></div>
        
 
 
