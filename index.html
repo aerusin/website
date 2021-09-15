@@ -47,17 +47,10 @@
             }
         </style>
         <script>
-            temp = 0;
-            //Tried to implement a function to change the color of the 
-            //button every time it was clicked.
             function changeColor(){
-                //if(temp = 0){
-                  //  i = document.getElementById("buttonColor");
-                   // i.background-color = black;
-                   //}
-                    
-                }
-
+             var randomColor =  '#' + Math.floor(Math.random()*16777215).toString(16);
+             document.getElementById('button1').style.backgroundColor = randomColor;
+            }
 
         </script>
     </head>
@@ -76,8 +69,10 @@
             <li>Soda</li>
             <li>Eggs</li>
         </ul>
+
+
         <label for="button">Click to change button to random color</label>
-        <button type = "button" onclick="changeColor()" id = #buttonColor>Click</button>
+        <button type = "button" onclick=changeColor() id="button1">Click Here!</button>
     
         
         
