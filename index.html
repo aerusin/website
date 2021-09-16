@@ -1,61 +1,11 @@
 <html>
     <head>
         <title>First Website Created</title>
-        <link rel="stylesheet" href="./style.css">
-        <style>
-            h2 {
-                color: black;
-                text-align: center;
-                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-                font-weight: bold;
-            }
-            .cat {
-                margin-left: auto;
-                margin-right: auto;
-                width: 30%;
-                display:block;
-                border-radius: 25px;
-            }
-            body {
-                background-image: radial-gradient(#cc5f5f, #5798ee);
-            }
-            button {
-                background-color: #cc5f5f;
-                width: 100px;
-                height: 60px;
-                
-            }
-            li {
-                color:rgb(182, 40, 182);
-                font-size: large;
-            }
-            div {
-                width: 50px;
-                height: 50px;
-                background-color: royalblue;
-                animation-name: rainbow;
-                animation-duration: 4s;
-                position: relative;
-
-            }
-
-            @keyframes rainbow {
-                0% {background-color: red; left: 0px; top: 0px;}
-                25% {background-color: orange; left: 100px; top: 100px;}
-                50% {background-color: green; right: 200px; top: 0px;}
-                100% {background-color: blue; left: 100px; top: -100px;}
-            }
-        </style>
-        <script>
-            function changeColor(){
-             var randomColor =  '#' + Math.floor(Math.random()*16777215).toString(16);
-             document.getElementById('button1').style.backgroundColor = randomColor;
-            }
-
-        </script>
+        <link rel="stylesheet" type= "text/css" href="./style.css">
     </head>
 
     <body>
+        <script src="app.js"></script>
 
         <img src="winston.jpg" class=cat>
         <h2>Cute picture of my cat Winston in a box</h2>
@@ -74,9 +24,19 @@
         <label for="button">Click to change button to random color</label>
         <button type = "button" onclick=changeColor() id="button1">Click Here!</button>
     
-        
-        
-        <div></div>
+        <h1>Calculator</h1>
+        <form id = "form" onsubmit="return false">
+        <input type="text" id ="userNum1">
+        <select name = "calc" id="calc">
+            <option value="1">+</option>
+            <option value="2">-</option>
+            <option value="3">*</option>
+            <option value="4">/</option>
+        </select>
+        <input type="text" id ="userNum2">
+        <input type="submit" onclick=calculate()>
+        <label for="output">Result:</label><input type="text" name="outputVal">
+        </form>
        
 
 
